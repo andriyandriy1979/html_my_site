@@ -1,0 +1,16 @@
+/**{
+	border: 1px solid black;
+}
+h1 {
+	margin: 0;
+}
+header .head{
+	background-image: url(../img/bagground_run.jpg);
+	background-color: #6B8E23;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	min-height: 700px;
+	display: grid;
+	place-items: center;
+}*/
