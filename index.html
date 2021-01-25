@@ -9,14 +9,14 @@
 
 <body>
 	
-	<header >
+	<header>
 			<div class="head">
 				<div class="line_menu">
 					<div class="logo_oll">
 						<div class="logo_word">Бігун<span class="color_z">Z</span>
 						</div>
 					</div>                           
-						<div class="menu">
+						<div id="menu">							
 							<div class="menu_oll_block">
 						<a href="#about">Про нас</a>
 						<a href="#programs">Наші програми</a>
@@ -25,23 +25,41 @@
 						<a href="#galerya">Галерея</a>
 						<a href="#store">Магазин</a>
 						<a href="#contacts">Контакти</a>
-							</div>
+							</div>							
 							<div class="socium">
 						<a href="https://uk-ua.facebook.com/"><img src="img/head_facebook.jpg" alt="facebook" width="25" height="25"></a>
 						<a href="https://www.instagram.com/"><img src="img/head_instagram.jpg" alt="instagram" width="25" height="25"></a>
 						<a href=https://www.youtube.com/><img src="img/head_youtube.jpg" alt="youtube" width="25" height="25"></a>
 							</div>
 						</div>
+						<a href="#menu" class="burger_menu" onclick="menuburg()">
+								≡
+						</a>						
+						<div id="blockburgmenu">
+							
+							<a href="#about">Про нас</a><br>
+							<a href="#programs">Наші програми</a><br>
+							<a href="#events">Події</a><br>
+							<a href="#membership">Приєднатись</a><br>
+							<a href="#galerya">Галерея</a><br>
+							<a href="#store">Магазин</a><br>
+							<a href="#contacts">Контакти</a>
+							<br>
+							<a href="https://uk-ua.facebook.com/"><img src="img/head_facebook.jpg" alt="facebook" width="25" height="25"></a>
+							<a href="https://www.instagram.com/"><img src="img/head_instagram.jpg" alt="instagram" width="25" height="25"></a>
+							<a href=https://www.youtube.com/><img src="img/head_youtube.jpg" alt="youtube" width="25" height="25"></a>
+						</div>
+						
 				</div>	
 				<div class="text_header">
-					<p class="text_header_white_text">ЗРОБИМО ЦЕ <span class="text_header_colortext">РАЗОМ</span></p>
+					<p class="text_header_white_text">БІГАЙ РАЗОМ <span class="text_header_colortext">З НАМИ</span></p>
 					<div class="text_header_club">
 					<p>Клуб для бігу Бігун Z</p>	
 					<div>
-					<a href="#membership"></a>
-					<button class="button_add">приєднатись</button>
-					<a href="#events"></a>
-					<button class="button_event">наші події</button>
+					
+					<button href="#membership" id="button_add">приєднатись</button>
+					
+					<button href="#events" id="button_event">наші події</button>
 				</div>      
 			</div>
 			
@@ -51,12 +69,13 @@
 	<main>
 		
 		<div class="about_us">
-			
+				
 				<img src="img/about_us_run.png" class="about_us_img" alt="Біг це життя">
-			
+				
 			<div class="about_us_text">
-				<div class="about">ПРО НАС
+				<div id="about">ПРО НАС
 				</div>
+				<div class="about_us_oll_text">
 				<p>Створена в 2015 році Бігун Z - це глобальна некомерційна організація, заснована піонером-бігуном Марком Келцом. Ми використовуємо біг як повсякденний засіб для розширення можливостей та об’єднання людей через створення місцевих клубів бігу, освітніх програм, платформ спілкування та соціальних заходів з бігу.</p>
 				<p>Ми прагнемо зруйнувати географічні бар’єри та створити глобальну спільноту для бігунів усіх здібностей, щоб підтримувати, заохочувати та надихати одне одного на позитивне відчуття себе.</p>
 				<br>
@@ -66,21 +85,35 @@
 				<a href="https://www.instagram.com/"><img src="img/head_instagram.jpg" alt="instagram" width="25" height="25"></a>
 				<a href=https://www.youtube.com/><img src="img/head_youtube.jpg" alt="youtube" width="25" height="25"></a>
 				<p><a href="#programs">Більше</a></p>
+				</div>
 			</div>
 		</div>
 		<br>
 
-		<div class="programs">
+		<div class="ourprograms">
 				<h2 id="programs">НАШІ ПРОГРАМИ</h2>
 				<p>Наші програми розширюють можливості та підтримують бігунів на будь-якому етапі. Розроблені для поступового розвитку та постійної підтримки</p>
 				<p>Запропоновані методи дадуть вам індивідуальні рекомендації з урахуванням ваших можливостей.</p>
 				   <div class="programs_img">
-					 <img src="img/prog1.jpg" class="programs_img_1" alt="тренування"><p>Регулярні тренування</p>
-					 <img src="img/prog2.jpg" class="programs_img_2" alt="особистий тренер"><p>Осибистий тренер</p>
-					 <img src="img/prog3.jpg" class="programs_img_3" alt="події чемпіонату"><p>Серія подій чемпіонату</p>
-					 <img src="img/prog4.jpg" class="programs_img_4" alt="діти і спорт"><p>Діти і спорт</p>
-					 <img src="img/prog5.jpg" class="programs_img_5" alt="спільнота бігунів"><p>Спільнота Бігун Z</p>
-					 <img src="img/prog6.jpg" class="programs_img_6" alt="офіс та біг"><p>Офісна робота та біг</p> 
+				   		<div class="programs_img1">
+							 <img src="img/prog1.jpg" class="programs_img_1" alt="тренування"><p>Регулярні тренування</p>
+						</div>
+				   		<div class="programs_img2">
+							 <img src="img/prog2.jpg" class="programs_img_2" alt="особистий тренер"><p>Осибистий тренер</p>
+					 	</div>
+				   		<div class="programs_img3">
+							 <img src="img/prog3.jpg" class="programs_img_3" alt="події чемпіонату"><p>Серія подій чемпіонату</p>
+						</div>
+				   		<div class="programs_img4">
+					 		<img src="img/prog4.jpg" class="programs_img_4" alt="діти і спорт"><p>Діти і спорт</p>
+						</div>
+				   		<div class="programs_img5">
+					 		<img src="img/prog5.jpg" class="programs_img_5" alt="спільнота бігунів"><p>Спільнота Бігун Z</p>
+					 	</div>
+				   		<div class="programs_img6">
+					 		<img src="img/prog6.jpg" class="programs_img_6" alt="офіс та біг"><p>Робота в офісі та біг</p> 
+				   		</div>
+
 				   </div> 
 		</div>
 		<br>
@@ -241,6 +274,6 @@
 		</div>
 
 	</footer>
-	
+	<script src="js/script.js"></script>
 </body>
 </html>
