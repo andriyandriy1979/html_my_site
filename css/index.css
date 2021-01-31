@@ -7,7 +7,6 @@ a {
 }
 header .head {
 	background: url("../img/bagground_run.png") no-repeat center / cover rgba(36, 31, 31);background-blend-mode: color-dodge;
-	/*background-image: url(../img/bagground_run.png);*/
 	background-color: #080B0A;
 	background-size: cover;
 	background-position: center;
@@ -61,7 +60,6 @@ img {
 }
 .socium {
 	padding-top:4.5%;
-	/*display: flex;*/
 }
 .burger_menu {
 	padding: 10px 15px;
@@ -113,10 +111,10 @@ img {
 #time {
 	color:#FFFFFF; 
 	font-size:18pt; 
-	/*border:2px solid #FFFFFF; */
 	background:none;
 	opacity: 0.8;
-	padding:5px;
+	margin-top: -10px;
+	position: fixed;
 }
 
 .text_header {
@@ -294,15 +292,195 @@ h2 {
 	padding-top: 50px;
 	max-width: 980px;
 }
-.programs_img1, .programs_img2, .programs_img3, .programs_img4, .programs_img5, .programs_img6 {
-	background-color: white;
-	max-width: 320px;
-	max-height: 320px;
-	text-align: center;
-	margin: auto;
+
+/* Сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 15px;
 }
-.programs_img_1, .programs_img_2, .programs_img_3, .programs_img_4, .programs_img_5, .programs_img_6 {
-	max-width: 300px;
-	max-height: 300px;
-	margin: auto;	
+/* Картинка маштабується по відношенню до батьківського элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border: none !important;
+    box-shadow: none !important;
 }
+/* Кнопки вперед і назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведенні на кнопки добавляемо фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайду */
+.slideText {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    /* Вирівнювання тексту по горизонталі і по вертикалі*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тінь*/
+    text-shadow: 3px 3px 3px #000, 0 0 1em #000;
+}
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анімація слайдів */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+/*Завершення каруселі*/
+/*Стилі для пункту наші програми*/
+.programs_text {
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.container_jule {
+	max-width: 980px;
+	display: flex;
+
+}
+.container_august {
+	max-width: 980px;
+	display: flex;
+
+}
+.events_in_date1 {
+	max-width: 480px;
+	max-height: 500px;
+	display: flex;
+	margin: 0% 1% 1% 0%;
+}
+.event_img1 {
+	width: 50%;
+	object-fit: cover;
+}
+.events_in_date_text {
+	background-color: #554E4E;
+	width: 50%;
+	padding: 5%;
+}
+.text_event_date {
+	color: #D7CACA;
+	font-size: 1.2em;
+}
+.text_event_year {
+	font-size: 2.5em;
+	color: white;
+}
+.text_events_color {
+	color: #5fe3cb;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+@media screen and (max-width: 800px) {
+
+.container_jule {
+	max-width: 100%;
+	display: block;
+	
+}
+.container_august {
+	max-width: 100%;
+	display: block;
+	margin-top: 4%;
+	
+}
+.events_in_date1 {
+	max-width: 100%;
+	max-height: 500px;
+	display: flex;
+
+}
+}
+@media screen and (max-width: 360px) {
+.container_jule {
+	width: 100%;
+	display: block;
+	
+}
+.container_august {
+	width: 100%;
+	display: block;
+
+	
+}
+.events_in_date1 {
+	max-width: 360px;
+	margin: 0px;
+	display: block;
+	max-height: 1000px;
+}
+.event_img1 {
+	width: 100%;
+	object-fit: cover;
+}
+.events_in_date_text {
+	background-color: #554E4E;
+	width: 100%;
+	padding: 15%;
+}
+
+
+	}
